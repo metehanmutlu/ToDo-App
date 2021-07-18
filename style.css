@@ -1,0 +1,169 @@
+:root {
+    --card-border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(255, 118, 99);
+    background: linear-gradient(95deg, rgba(255, 118, 99, 1) 27%, rgba(255, 200, 40, 1) 72%);
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 890px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-10%);
+}
+
+h4 {
+    font-size: 1.2rem;
+    padding: 15px 10px;
+}
+
+#card-new-task {
+    border: var(--card-border);
+    border-radius: 5px;
+}
+
+#card-task-list {
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.card-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: var(--card-border);
+    background-color: #ededed;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card-main {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: wheat;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+form input {
+    width: 90%;
+    padding: 10px 5px;
+    margin: 15px 0px;
+    font-size: 20px;
+    text-align: left;
+    border-radius: 5px;
+    border: var(--card-border);
+}
+
+form input:focus {
+    outline: none !important;
+    border: 2px solid goldenrod;
+    box-shadow: 0 0 5px goldenrod;
+}
+
+form button i {
+    font-size: 35px;
+}
+
+form button:hover {
+    opacity: 0.6;
+}
+
+.delete-all {
+    margin-left: auto;
+    margin-right: 20px;
+    align-self: center;
+}
+
+.tasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.tasks ul .task-container {
+    width: auto;
+    height: auto;
+    border: var(--card-border);
+    background-color: wheat;
+    color: black;
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+.fall {
+    transform: translateY(10rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+.slide-to-remove {
+    transform: translateX(-20rem);
+    opacity: 0;
+}
+
+.tasks ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.tasks ul li {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 15px;
+    transition: all 1s ease;
+}
+
+.tasks ul li a {
+    margin-left: auto;
+    margin-right: 20px;
+    align-self: center;
+    color: white;
+    font-size: 20px;
+}
+
+.tasks ul li a:hover {
+    color: #0d6efd;
+}
